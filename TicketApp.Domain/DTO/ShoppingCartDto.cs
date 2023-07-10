@@ -1,4 +1,6 @@
 ﻿using System;
+using TicketApp.Domain.DomainModels;
+
 namespace TicketApp.Domain.DTO
 {
     public class ShoppingCartDto

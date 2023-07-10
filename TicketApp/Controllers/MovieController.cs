@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using TicketApp.Data;
 using TicketApp.Models;
+using TicketApp.Repository;
 
 namespace TicketApp.Controllers
 {

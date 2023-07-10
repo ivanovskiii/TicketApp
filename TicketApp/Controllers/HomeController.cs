@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using TicketApp.Domain.DomainModels;
 using TicketApp.Models;
 
 namespace TicketApp.Controllers;

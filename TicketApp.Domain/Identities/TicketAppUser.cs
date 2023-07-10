@@ -1,7 +1,8 @@
 ﻿using System;
 using Microsoft.AspNetCore.Identity;
+using TicketApp.Domain.DomainModels;
 
-namespace TicketApp.Models
+namespace TicketApp.Domain
 {
 	public class TicketAppUser : IdentityUser
 	{

@@ -1,4 +1,4 @@
-﻿@model TicketApp.Models.ShoppingCartDto
+﻿@model TicketApp.Domain.DTO.ShoppingCartDto
 
 <h1>Your Cart</h1>
 
@@ -73,7 +73,7 @@ else
                         </td>
 
                         <td>
-                            <a class="btn btn-danger" href="/ShoppingCart/DeleteFromShoppingCart/@item.Ticket.TicketId">Delete</a>
+                            <a class="btn btn-danger" href="/ShoppingCart/DeleteFromShoppingCart/@item.Ticket.Id">Delete</a>
                         </td>
                     </tr>
                 }

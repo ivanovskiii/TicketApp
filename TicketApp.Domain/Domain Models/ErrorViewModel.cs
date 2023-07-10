@@ -1,4 +1,4 @@
-﻿namespace TicketApp.Domain.DomainModels
+﻿namespace TicketApp.Domain.DomainModels;
 
 public class ErrorViewModel
 {

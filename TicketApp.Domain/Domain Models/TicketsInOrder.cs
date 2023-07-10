@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
+using TicketApp.Models;
 
 namespace TicketApp.Domain.DomainModels
 {

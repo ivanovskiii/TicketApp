@@ -1,9 +1,11 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using TicketApp.Domain;
+using TicketApp.Domain.DomainModels;
 
 namespace TicketApp.Models
 {
-	public class Order
+	public class Order : BaseEntity
 	{
         [Key]
 		public int OrderId { get; set; }

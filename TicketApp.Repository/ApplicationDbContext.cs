@@ -1,8 +1,10 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using TicketApp.Domain;
+using TicketApp.Domain.DomainModels;
 using TicketApp.Models;
 
-namespace TicketApp.Data;
+namespace TicketApp.Repository;
 
 public class ApplicationDbContext : IdentityDbContext<TicketAppUser>
 {
@@ -10,9 +12,9 @@ public class ApplicationDbContext : IdentityDbContext<TicketAppUser>
         : base(options)
     {
     }
-    public DbSet<TicketApp.Models.Movie> Movie { get; set; } = default!;
+    public DbSet<Movie> Movie { get; set; } = default!;
 
-    public DbSet<TicketApp.Models.Ticket> Ticket { get; set; } = default!;
+    public DbSet<Ticket> Ticket { get; set; } = default!;
 
     public virtual DbSet<ShoppingCart> ShoppingCart { get; set; }
 
@@ -31,4 +33,3 @@ public class ApplicationDbContext : IdentityDbContext<TicketAppUser>
         builder.Entity<TicketsInOrder>().HasKey(c => new { c.OrderId, c.TicketId });
     }
 }
-

@@ -18,7 +18,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
-using TicketApp.Models;
+using TicketApp.Domain;
+using TicketApp.Domain.DomainModels;
 
 namespace TicketApp.Areas.Identity.Pages.Account
 {

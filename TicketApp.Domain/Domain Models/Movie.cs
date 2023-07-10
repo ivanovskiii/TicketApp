@@ -1,9 +1,10 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using TicketApp.Domain.DomainModels;
 
 namespace TicketApp.Models
 {
-	public class Movie
+	public class Movie : BaseEntity
 	{
         [Key]
         public int Id { get; set; }
