@@ -51,6 +51,12 @@ namespace TicketApp.Service.Implementation
         {
             _ticketRepository.Update(t);
         }
+
+        public List<Ticket> GetTicketsForMovie(int id)
+        {
+            return _ticketRepository.GetAll().Where(t => t.MovieId == id).ToList();
+        }
+
     }
 }
 

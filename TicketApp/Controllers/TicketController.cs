@@ -15,10 +15,12 @@ namespace TicketApp.Controllers
     public class TicketController : Controller
     {
         private readonly ITicketService _ticketService;
+        private readonly IMovieService _movieService;
 
-        public TicketController(ITicketService ticketService)
+        public TicketController(ITicketService ticketService, IMovieService movieService)
         {
             _ticketService = ticketService;
+            _movieService = movieService;
         }
 
         // GET: Ticket
@@ -120,7 +122,8 @@ namespace TicketApp.Controllers
         // GET: Ticket/Create
         public IActionResult Create()
         {
-            //ViewData["MovieId"] = new SelectList(_context.Movie, "Id", "Title");
+            var movies = _movieService.GetAllMovies();
+            ViewBag.MovieId = new SelectList(movies, "Id", "Title");
             return View();
         }
 
@@ -214,7 +217,7 @@ namespace TicketApp.Controllers
             //    return Problem("Entity set 'ApplicationDbContext.Ticket'  is null.");
             //}
             //var ticket = await _context.Ticket.FindAsync(id);
-            //if (ticket != null)
+            //if (ticket != null)using System;
             //{
             //    _context.Ticket.Remove(ticket);
             //}

@@ -20,6 +20,8 @@ namespace TicketApp.Service.Interface
 		public ShoppingCartDto GetShoppingCartInfo(int id);
 
 		public void UpdateExistingTicket(Ticket t);
+
+		public List<Ticket> GetTicketsForMovie(int id);
 	}
 }
 

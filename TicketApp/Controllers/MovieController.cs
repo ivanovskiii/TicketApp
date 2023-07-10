@@ -11,10 +11,12 @@ namespace TicketApp.Controllers
     public class MovieController : Controller
     {
         private readonly IMovieService _movieService;
+        private readonly ITicketService _ticketService;
 
-        public MovieController(IMovieService movieService)
+        public MovieController(IMovieService movieService, ITicketService ticketService)
         {
             _movieService = movieService;
+            _ticketService = ticketService;
         }
 
         public async Task<IActionResult> Index(string genre)
@@ -42,15 +44,21 @@ namespace TicketApp.Controllers
                 return NotFound();
             }
 
-            var movie = _movieService.GetDetailsForMovie(id??0);
+            var movie = _movieService.GetDetailsForMovie(id ?? 0);
 
             if (movie == null)
             {
                 return NotFound();
             }
 
+            var tickets = _ticketService.GetTicketsForMovie(movie.Id);
+            movie.Tickets = tickets;
+
             return View(movie);
         }
+
+
+
 
         // GET: Movie/Create
         public IActionResult Create()
