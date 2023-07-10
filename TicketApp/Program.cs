@@ -24,6 +24,8 @@ builder.Services.AddDefaultIdentity<TicketAppUser>()
 // Register the ITicketService and TicketService
 builder.Services.AddScoped<ITicketService, TicketService>();
 builder.Services.AddScoped<IRepository<Ticket>, Repository<Ticket>>();
+builder.Services.AddScoped<IMovieService, MovieService>();
+builder.Services.AddScoped<IMovieRepository<Movie>, MovieRepository<Movie>>();
 
 builder.Services.AddControllers();
 

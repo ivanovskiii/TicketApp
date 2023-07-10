@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using TicketApp.Domain;
 using TicketApp.Domain.DomainModels;
 
-namespace TicketApp.Models
+namespace TicketApp.Domain.DomainModels
 {
 	public class Order : BaseEntity
 	{

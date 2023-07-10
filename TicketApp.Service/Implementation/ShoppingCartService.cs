@@ -1,6 +1,5 @@
 using TicketApp.Domain.DomainModels;
 using TicketApp.Domain.DTO;
-using TicketApp.Models;
 using TicketApp.Repository.Interface;
 using TicketApp.Service.Interface;
 

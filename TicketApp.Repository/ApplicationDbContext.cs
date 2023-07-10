@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using TicketApp.Domain;
 using TicketApp.Domain.DomainModels;
-using TicketApp.Models;
 
 namespace TicketApp.Repository;
 

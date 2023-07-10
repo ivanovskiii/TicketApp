@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using TicketApp.Domain.DomainModels;
 
-namespace TicketApp.Models
+namespace TicketApp.Domain.DomainModels
 {
 	public class Movie : BaseEntity
 	{
